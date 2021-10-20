@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 
 # Create your views here.
 def index(request):
-    return HttpResponse('Olá Marilene')
+    return render(request, 'generator/index.html', {'password': 'uhfi234##4n$#n1#@%25l#'})
