@@ -10,9 +10,6 @@ def password(request):
 
     length = 10
 
-    the_password = ''
-
-    for x in range(length):
-        the_password += random.choice(characters)
+    the_password = ''.join(random.choice(characters) for _ in range(length))
 
     return render(request, 'generator/password.html', {'password': the_password})
